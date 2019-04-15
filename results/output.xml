@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190412 17:01:48.322" rpa="false" generator="Robot 3.1.1 (Python 3.5.2 on linux)">
-<suite name="Test" source="/home/fuyuning/workspaces/robot-demo/tests/test.robot" id="s1">
-<test name="Get Car Models Test" id="s1-t1">
+<robot rpa="false" generator="Robot 3.1.1 (Python 3.5.2 on linux)" generated="20190415 11:19:52.168">
+<suite source="/home/fuyuning/workspaces/robot-demo/tests/test.robot" id="s1" name="Test">
+<test id="s1-t1" name="Get Car Models Test">
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
 <assign>
 <var>${essential_params}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.353">${essential_params} = []</msg>
-<status status="PASS" starttime="20190412 17:01:48.353" endtime="20190412 17:01:48.353"></status>
+<msg timestamp="20190415 11:19:52.200" level="INFO">${essential_params} = []</msg>
+<status starttime="20190415 11:19:52.200" status="PASS" endtime="20190415 11:19:52.200"></status>
 </kw>
 <kw name="Create List" library="BuiltIn">
 <doc>Returns a list containing given items.</doc>
@@ -24,8 +24,8 @@
 <assign>
 <var>${unessential_params}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.353">${unessential_params} = ['car_brand=奥迪', 'car_series=R8', 'car_scale=S', 'car_model=R8', 'is_car_model=False', 'page_num=1', 'page_size=1']</msg>
-<status status="PASS" starttime="20190412 17:01:48.353" endtime="20190412 17:01:48.353"></status>
+<msg timestamp="20190415 11:19:52.200" level="INFO">${unessential_params} = ['car_brand=奥迪', 'car_series=R8', 'car_scale=S', 'car_model=R8', 'is_car_model=False', 'page_num=1', 'page_size=1']</msg>
+<status starttime="20190415 11:19:52.200" status="PASS" endtime="20190415 11:19:52.200"></status>
 </kw>
 <kw name="Auto Params" library="test_library.TestLibrary">
 <arguments>
@@ -35,32 +35,11 @@
 <assign>
 <var>${results}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.354">2...
-car_brand=奥迪
-{'car_brand': '奥迪'}
-2...
-car_series=R8
-{'car_series': 'R8'}
-2...
-car_scale=S
-{'car_scale': 'S'}
-2...
-car_model=R8
-{'car_model': 'R8'}
-2...
-is_car_model=False
-{'is_car_model': 'False'}
-2...
-page_num=1
-{'page_num': '1'}
-2...
-page_size=1
-{'page_size': '1'}</msg>
-<msg level="INFO" timestamp="20190412 17:01:48.354">${results} = [{'car_brand': '奥迪'}, {'car_series': 'R8'}, {'car_scale': 'S'}, {'car_model': 'R8'}, {'is_car_model': 'False'}, {'page_num': '1'}, {'page_size': '1'}]</msg>
-<status status="PASS" starttime="20190412 17:01:48.353" endtime="20190412 17:01:48.354"></status>
+<msg timestamp="20190415 11:19:52.201" level="INFO">${results} = [{'car_brand': '奥迪'}, {'car_series': 'R8'}, {'car_scale': 'S'}, {'car_model': 'R8'}, {'is_car_model': 'False'}, {'page_num': '1'}, {'page_size': '1'}]</msg>
+<status starttime="20190415 11:19:52.200" status="PASS" endtime="20190415 11:19:52.201"></status>
 </kw>
-<kw name="${kwargs} IN [ @{results} ]" type="for">
-<kw name="${kwargs} = {'car_brand': '奥迪'}" type="foritem">
+<kw type="for" name="${kwargs} IN [ @{results} ]">
+<kw type="foritem" name="${kwargs} = {'car_brand': '奥迪'}">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
@@ -78,16 +57,16 @@ page_size=1
 <assign>
 <var>${resp}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.355">${resp} = {'car_brand': '奥迪'}</msg>
-<status status="PASS" starttime="20190412 17:01:48.355" endtime="20190412 17:01:48.355"></status>
+<msg timestamp="20190415 11:19:52.202" level="INFO">${resp} = {'car_brand': '奥迪'}</msg>
+<status starttime="20190415 11:19:52.202" status="PASS" endtime="20190415 11:19:52.202"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.354" endtime="20190412 17:01:48.355"></status>
+<status starttime="20190415 11:19:52.201" status="PASS" endtime="20190415 11:19:52.202"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.354" endtime="20190412 17:01:48.355"></status>
+<status starttime="20190415 11:19:52.201" status="PASS" endtime="20190415 11:19:52.202"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.354" endtime="20190412 17:01:48.355"></status>
+<status starttime="20190415 11:19:52.201" status="PASS" endtime="20190415 11:19:52.202"></status>
 </kw>
-<kw name="${kwargs} = {'car_series': 'R8'}" type="foritem">
+<kw type="foritem" name="${kwargs} = {'car_series': 'R8'}">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
@@ -105,16 +84,16 @@ page_size=1
 <assign>
 <var>${resp}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.356">${resp} = {'car_series': 'R8'}</msg>
-<status status="PASS" starttime="20190412 17:01:48.356" endtime="20190412 17:01:48.356"></status>
+<msg timestamp="20190415 11:19:52.203" level="INFO">${resp} = {'car_series': 'R8'}</msg>
+<status starttime="20190415 11:19:52.203" status="PASS" endtime="20190415 11:19:52.203"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.355" endtime="20190412 17:01:48.356"></status>
+<status starttime="20190415 11:19:52.202" status="PASS" endtime="20190415 11:19:52.203"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.355" endtime="20190412 17:01:48.356"></status>
+<status starttime="20190415 11:19:52.202" status="PASS" endtime="20190415 11:19:52.203"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.355" endtime="20190412 17:01:48.356"></status>
+<status starttime="20190415 11:19:52.202" status="PASS" endtime="20190415 11:19:52.203"></status>
 </kw>
-<kw name="${kwargs} = {'car_scale': 'S'}" type="foritem">
+<kw type="foritem" name="${kwargs} = {'car_scale': 'S'}">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
@@ -132,16 +111,16 @@ page_size=1
 <assign>
 <var>${resp}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.357">${resp} = {'car_scale': 'S'}</msg>
-<status status="PASS" starttime="20190412 17:01:48.356" endtime="20190412 17:01:48.357"></status>
+<msg timestamp="20190415 11:19:52.204" level="INFO">${resp} = {'car_scale': 'S'}</msg>
+<status starttime="20190415 11:19:52.203" status="PASS" endtime="20190415 11:19:52.204"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.356" endtime="20190412 17:01:48.357"></status>
+<status starttime="20190415 11:19:52.203" status="PASS" endtime="20190415 11:19:52.204"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.356" endtime="20190412 17:01:48.357"></status>
+<status starttime="20190415 11:19:52.203" status="PASS" endtime="20190415 11:19:52.204"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.356" endtime="20190412 17:01:48.357"></status>
+<status starttime="20190415 11:19:52.203" status="PASS" endtime="20190415 11:19:52.204"></status>
 </kw>
-<kw name="${kwargs} = {'car_model': 'R8'}" type="foritem">
+<kw type="foritem" name="${kwargs} = {'car_model': 'R8'}">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
@@ -159,16 +138,16 @@ page_size=1
 <assign>
 <var>${resp}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.358">${resp} = {'car_model': 'R8'}</msg>
-<status status="PASS" starttime="20190412 17:01:48.357" endtime="20190412 17:01:48.358"></status>
+<msg timestamp="20190415 11:19:52.205" level="INFO">${resp} = {'car_model': 'R8'}</msg>
+<status starttime="20190415 11:19:52.204" status="PASS" endtime="20190415 11:19:52.205"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.357" endtime="20190412 17:01:48.358"></status>
+<status starttime="20190415 11:19:52.204" status="PASS" endtime="20190415 11:19:52.205"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.357" endtime="20190412 17:01:48.358"></status>
+<status starttime="20190415 11:19:52.204" status="PASS" endtime="20190415 11:19:52.205"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.357" endtime="20190412 17:01:48.358"></status>
+<status starttime="20190415 11:19:52.204" status="PASS" endtime="20190415 11:19:52.205"></status>
 </kw>
-<kw name="${kwargs} = {'is_car_model': 'False'}" type="foritem">
+<kw type="foritem" name="${kwargs} = {'is_car_model': 'False'}">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
@@ -186,16 +165,16 @@ page_size=1
 <assign>
 <var>${resp}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.359">${resp} = {'is_car_model': 'False'}</msg>
-<status status="PASS" starttime="20190412 17:01:48.358" endtime="20190412 17:01:48.359"></status>
+<msg timestamp="20190415 11:19:52.206" level="INFO">${resp} = {'is_car_model': 'False'}</msg>
+<status starttime="20190415 11:19:52.205" status="PASS" endtime="20190415 11:19:52.206"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.358" endtime="20190412 17:01:48.359"></status>
+<status starttime="20190415 11:19:52.205" status="PASS" endtime="20190415 11:19:52.206"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.358" endtime="20190412 17:01:48.359"></status>
+<status starttime="20190415 11:19:52.205" status="PASS" endtime="20190415 11:19:52.206"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.358" endtime="20190412 17:01:48.359"></status>
+<status starttime="20190415 11:19:52.205" status="PASS" endtime="20190415 11:19:52.206"></status>
 </kw>
-<kw name="${kwargs} = {'page_num': '1'}" type="foritem">
+<kw type="foritem" name="${kwargs} = {'page_num': '1'}">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
@@ -213,16 +192,16 @@ page_size=1
 <assign>
 <var>${resp}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.359">${resp} = {'page_num': '1'}</msg>
-<status status="PASS" starttime="20190412 17:01:48.359" endtime="20190412 17:01:48.359"></status>
+<msg timestamp="20190415 11:19:52.206" level="INFO">${resp} = {'page_num': '1'}</msg>
+<status starttime="20190415 11:19:52.206" status="PASS" endtime="20190415 11:19:52.206"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.359" endtime="20190412 17:01:48.359"></status>
+<status starttime="20190415 11:19:52.206" status="PASS" endtime="20190415 11:19:52.207"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.359" endtime="20190412 17:01:48.360"></status>
+<status starttime="20190415 11:19:52.206" status="PASS" endtime="20190415 11:19:52.207"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.359" endtime="20190412 17:01:48.360"></status>
+<status starttime="20190415 11:19:52.206" status="PASS" endtime="20190415 11:19:52.207"></status>
 </kw>
-<kw name="${kwargs} = {'page_size': '1'}" type="foritem">
+<kw type="foritem" name="${kwargs} = {'page_size': '1'}">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
 <arguments>
@@ -240,30 +219,30 @@ page_size=1
 <assign>
 <var>${resp}</var>
 </assign>
-<msg level="INFO" timestamp="20190412 17:01:48.360">${resp} = {'page_size': '1'}</msg>
-<status status="PASS" starttime="20190412 17:01:48.360" endtime="20190412 17:01:48.360"></status>
+<msg timestamp="20190415 11:19:52.207" level="INFO">${resp} = {'page_size': '1'}</msg>
+<status starttime="20190415 11:19:52.207" status="PASS" endtime="20190415 11:19:52.207"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.360" endtime="20190412 17:01:48.360"></status>
+<status starttime="20190415 11:19:52.207" status="PASS" endtime="20190415 11:19:52.207"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.360" endtime="20190412 17:01:48.360"></status>
+<status starttime="20190415 11:19:52.207" status="PASS" endtime="20190415 11:19:52.208"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.360" endtime="20190412 17:01:48.360"></status>
+<status starttime="20190415 11:19:52.207" status="PASS" endtime="20190415 11:19:52.208"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.354" endtime="20190412 17:01:48.360"></status>
+<status starttime="20190415 11:19:52.201" status="PASS" endtime="20190415 11:19:52.208"></status>
 </kw>
-<status status="PASS" starttime="20190412 17:01:48.352" endtime="20190412 17:01:48.361" critical="yes"></status>
+<status critical="yes" starttime="20190415 11:19:52.199" status="PASS" endtime="20190415 11:19:52.208"></status>
 </test>
-<status status="PASS" starttime="20190412 17:01:48.323" endtime="20190412 17:01:48.361"></status>
+<status starttime="20190415 11:19:52.169" status="PASS" endtime="20190415 11:19:52.208"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test" pass="1" fail="0" id="s1">Test</stat>
+<stat fail="0" id="s1" name="Test" pass="1">Test</stat>
 </suite>
 </statistics>
 <errors>

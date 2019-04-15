@@ -1,0 +1,10 @@
+docutils
+pillow
+pytesseract
+requests
+robot-jsonschemalibrary
+robotframework
+urllib3
+jsonschema
+xlwt
+xlrd
